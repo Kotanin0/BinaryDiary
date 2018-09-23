@@ -1,24 +1,46 @@
 # Kotlin Koans を日本語化してみたぞ！
 
-という連載をはじめたい。
+ー挨拶ー
 
-イントロダクションがここらへんに入ると思う。Kotlinとは。Kotlin Koansとは。とか。
+Kotlin、これからもっともっと人気が出てくるであろうプログラミング言語。
 
+弊社内でも少しずつ採用範囲が広がってきていますが、よく耳にする声はやはり
 
-## Kotlin とは
+「Kotlinを学びたいけどどこから始めたらいいかわからない。。。」
 
-言語のことを簡単に書く。
+わかる、わかりみ、わかりてぃ。
 
+可愛いKotlinには、そういう走り出しを支援してくれるステキな助言が[Kotlin公式リファレンス](https://dogwood008.github.io/kotlin-web-site-ja/docs/reference/)のトップに記載されています。
+
+- [Kotlin公式リファレンス](https://dogwood008.github.io/kotlin-web-site-ja/docs/reference/)を読みながら[オンラインIDE](http://try.kotlinlang.org/)で遊んでみよう
+- 書籍を読もう
+- [Kotlin Koans](https://dogwood008.github.io/kotlin-web-site-ja/docs/tutorials/koans.html)に挑戦しよう
+
+また、[日本Kotlinユーザグループ](https://kotlin.connpass.com/)では、Kotlin入門のための助走読本という日本語教科書が提供されています。
+
+と、いくつか勉強方法のアドバイスがある中、Kotlin Koansにフォーカスします。
 
 ## Kotlin Koans とは
 
-公安禅のことを簡単に書く。
+[Kotlin Koans](https://dogwood008.github.io/kotlin-web-site-ja/docs/tutorials/koans.html)
 
+> インタラクティブなプログラミング演習
 
-# Kotlin Koans 第0章 -じゅんび-
+とある通り、Kotlinのプログラミング問題集です。
+
+Koans＝コーアンズと呼びます。
+
+名前の由来は「公案」という日本語から来ているそうです。禅問答のことらしい。オシャレ。
+
+Kotlin Koansには、40問ちょいの問題が用意されています。
+
+本連載記事は、それを日本語で解説してみるをテーマに書き進めます。
+
+初回は準備編、第0章です。
+
+# Kotlin Koans 第0章 -準備-
 
 Kotlin Koans を使って学習する方法は、大きく2通りあります。
-
 
 ## オンラインで学習する
 
