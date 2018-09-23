@@ -1,91 +1,18 @@
-# Kotlin Koans を日本語化してみたぞ！
+# 【Kotlin Koans】解いてみるぞ！ 第1章 -はじまりはじまり-
 
 ー挨拶ー
 
-Kotlin、これからもっともっと人気が出てくるであろうプログラミング言語。
+[前回の記事：【Kotlin Koans】はじめるぞ！ 第0章 -準備-]()
 
-弊社内でも少しずつ採用範囲が広がってきていますが、よく耳にする声はやはり
+さて、今回からKotlin Koansを実際に解いていきます。
 
-「Kotlinを学びたいけどどこから始めたらいいかわからない。。。」
+本日は第1章ということで、 `Introduction` にある0-12問を解いていきます。
 
-わかる、わかりみ、わかりてぃ。
-
-可愛いKotlinには、そういう走り出しを支援してくれるステキな助言が[Kotlin公式リファレンス](https://dogwood008.github.io/kotlin-web-site-ja/docs/reference/)のトップに記載されています。
-
-- [Kotlin公式リファレンス](https://dogwood008.github.io/kotlin-web-site-ja/docs/reference/)を読みながら[オンラインIDE](http://try.kotlinlang.org/)で遊んでみよう
-- 書籍を読もう
-- [Kotlin Koans](https://dogwood008.github.io/kotlin-web-site-ja/docs/tutorials/koans.html)に挑戦しよう
-
-また、[日本Kotlinユーザグループ](https://kotlin.connpass.com/)では、Kotlin入門のための助走読本という日本語教科書が提供されています。
-
-と、いくつか勉強方法のアドバイスがある中、Kotlin Koansにフォーカスします。
-
-## Kotlin Koans とは
-
-[Kotlin Koans](https://dogwood008.github.io/kotlin-web-site-ja/docs/tutorials/koans.html)
-
-> インタラクティブなプログラミング演習
-
-とある通り、Kotlinのプログラミング問題集です。
-
-Koans＝コーアンズと呼びます。
-
-名前の由来は「公案」という日本語から来ているそうです。禅問答のことらしい。オシャレ。
-
-Kotlin Koansには、40問ちょいの問題が用意されています。
-
-本連載記事は、それを日本語で解説してみるをテーマに書き進めます。
-
-初回は準備編、第0章です。
-
-# Kotlin Koans 第0章 -準備-
-
-Kotlin Koans を使って学習する方法は、大きく2通りあります。
-
-## オンラインで学習する
-
-オンラインとは、Kotlin本家が提供している Try Kotlin というWeb上のエディタで学習することを指します。
-
-http://try.kotlinlang.org/koans
-
-百聞は一見にしかずです、以下をご覧ください。
-
-[といっていい感じの画像 or gifを挿入]
-
-コードを書く、テスト実行する、カンニングする、が気軽に行えます。
-
-このように、ローカルに開発環境が備わっていなくても、Webブラウザ上で気軽に学習することができます。
-
-
-## オフラインで学習する
-
-オフラインとは、Kotlin本家が提供している、Kotlin Koans のGitHubリポジトリからソースを落として、ローカルで学習することを指します。
-
-https://github.com/Kotlin/kotlin-koans
-
-ここから自分のマシンに落として、お好きなエディタ ( IntelliJ IDEA 一択ですよね ) で学習します。
-
-テスト実行の際は、gradlew コマンドで試す感じになります。
-
-./gradlew test --tests ii_*14*
-
-テスト結果をターミナルで確認する感じになります。
-
-また、テスト実行結果は都度htmlで出力されるので、そちらを確認するのもありです。
-
-[自分のワークスペース]/kotlin-koans/build/reports/tests/test/index.html
-
-カンニングをしたい際は、resolutions ブランチに切り替えると素敵な世界が見えるかと。
-
-
-# Kotlin Koans 第1章 -はじまり-
-
-ここからは Kotlin Koans の問題とその回答の一例を載せていきます。
+わたしの環境は、IntelliJ IDEAでEduToolsスタイルです。
 
 なんとしても自力で解きたい方、ごめんなさいネタバレ含むなので、自己判断でご覧ください。
 
 また、英語力はそこまで高くないので、独断と偏見のエモい意訳が多々ありますがご容赦ください。
-
 
 ## 0. こんにちは世界
 
