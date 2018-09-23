@@ -12,7 +12,7 @@ Kotlin、これからもっともっと人気が出てくるであろうプロ�
 
 可愛いKotlinには、そういう走り出しを支援してくれるステキな助言が[Kotlin公式リファレンス](https://dogwood008.github.io/kotlin-web-site-ja/docs/reference/)のトップに記載されています。
 
-- [Kotlin公式リファレンス](https://dogwood008.github.io/kotlin-web-site-ja/docs/reference/)を読みながら[オンラインIDE](http://try.kotlinlang.org/)で遊んでみよう
+- [オンラインIDE](http://try.kotlinlang.org/)で遊んでみよう
 - 書籍を読もう
 - [Kotlin Koans](https://dogwood008.github.io/kotlin-web-site-ja/docs/tutorials/koans.html)に挑戦しよう
 
@@ -39,8 +39,6 @@ Kotlin Koansには、40問ちょいの問題が用意されています。
 初回は準備編、第0章です。
 
 # Kotlin Koans 第0章 -準備-
-
-Kotlin Koans を使って学習する方法は、大きく2通りあります。
 
 ## オンラインで学習する
 
