@@ -46,7 +46,7 @@ Kotlin Koans を使って学習する方法は、大きく2通りあります。
 
 オンラインとは、[Try Kotlin](http://try.kotlinlang.org/koans) というWeb上のエディタで学習することを指します。
 
-![Try Kotlinを動かしてみたGif](./KotlinKoansOnlineSample002.gif)
+![Try Kotlinを動かしてみたGif](./KotlinKoansOnlineSample.gif)
 
 このようなWeb上のエディタがあります、左カラムに演習があり、それをひとつずつ解いていきます。
 
