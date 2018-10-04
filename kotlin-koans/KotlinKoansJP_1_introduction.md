@@ -82,14 +82,8 @@ fun joinOptions(options: Collection<String>) =
 ## 3. デフォルト引数
 
 #### 問題
-問題文内にJavaで書かれたオーバーロードだらけの関数fooがあります。
+Javaで書かれたオーバーロードだらけの関数fooがあります。
 
-Kotlinでは1つの関数に置き換えられるのでやってみましょう。
-
-#### 解答と解説
-[デフォルト引数](https://dogwood008.github.io/kotlin-web-site-ja/docs/reference/functions.html#%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%81%AE%E5%BC%95%E6%95%B0)とは、関数の引数に初期値を定義しておくことで、同名複数のオーバーライドを減らすことができる書き方です。
-
-今回は引数違いで4つあるJavaのfoo関数
 ```java
 public String foo(String name, int number, boolean toUpperCase) {
     return (toUpperCase ? name.toUpperCase() : name) + number;
@@ -105,7 +99,12 @@ public String foo(String name) {
 }
 ```
 
-これをKotlinのデフォルト引数を利用して1つにしちゃいましょう。
+Kotlinでは1つの関数に置き換えられるのでやってみましょう。
+
+#### 解答と解説
+[デフォルト引数](https://dogwood008.github.io/kotlin-web-site-ja/docs/reference/functions.html#%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%81%AE%E5%BC%95%E6%95%B0)とは、関数の引数に初期値を定義しておくことで、同名複数のオーバーライドを減らすことができる書き方です。
+
+今回は引数違いで4つあるJavaのfoo関数を、Kotlinのデフォルト引数を利用して1つにしちゃいましょう。
 
 - `name` は使ってそう
 - `number` はデフォルト `42` でよさそう
@@ -142,5 +141,79 @@ fun containsEven(collection: Collection<Int>) =
     collection.any { it % 2 == 0 }
 ```
 
+## 5. 文字列
 
+#### 問題
+日付を表現した文字列 `13.06.1992` に対応する正規表現パターンは `"""\d{2}\.\d{2}\.\d{4}"""` です。
+
+では、`13 JUN 1992`（日、スペース、月の省略形、スペース、年）を正規表現を用いて表現しましょう。
+
+#### 解答と解説
+
+[文字列リテラル](https://dogwood008.github.io/kotlin-web-site-ja/docs/reference/basic-types.html#%E6%96%87%E5%AD%97%E5%88%97%E3%83%AA%E3%83%86%E3%83%A9%E3%83%AB)は、ダブルクォート3連発 `"""` で囲むことで、エスケープが不要になります。
+
+正規表現で `¥d` 使いたいときに `¥¥d` にしなくていいし、改行などもそのまま表現することができます。
+
+[文字列テンプレート](https://dogwood008.github.io/kotlin-web-site-ja/docs/reference/basic-types.html#%E6%96%87%E5%AD%97%E5%88%97%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88)は、文字列内で変数を利用できる記法です。
+
+文字列内でドル記号(`$`)はじまりで変数名を指定することで、可読性高い文字列のコードが書けます。
+
+名前と年齢を出力したいようなときに、従来の書き方だとこんなかんじ。
+
+`"名前＝" + member.name + ", 年齢＝" + member.age`
+
+文字列テンプレートを利用するとこんなかんじ。
+
+`"名前＝$member.name, 年齢＝$member.age"`
+
+かなり可読性が上がりますね、すごくわかりやすい。
+
+今回の問題は、文字列リテラルと文字列テンプレートを併用するかたちが解答になります。
+
+```kotlin
+fun getPattern() = """\d{2}\ $month \d{4}"""
+```
+
+## 6. データクラス
+
+#### 問題
+
+Javaで書かれているPersonクラスがあります。
+```java
+public class Person {
+    private final String name;
+    private final int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+```
+
+Kotlinのdata classを使って置き換えてみましょう。
+
+#### 解答と解説
+
+[データクラス](https://dogwood008.github.io/kotlin-web-site-ja/docs/reference/classes.html#%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%82%BF)は、シンプルにデータを扱うことに特化した修飾子です。
+
+プライマリコンストラクタとして、classの[コンストラクタ](https://dogwood008.github.io/kotlin-web-site-ja/docs/reference/classes.html#%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%82%BF)を明示します。
+
+冗長なコンストラクタを書いたり、フィールド宣言したり、といったコードを不要としてスッキリさせることができます。
+
+今回は、問題に記載のあるJavaコードをコピペすることで、classへの変換は行ってくれます。
+
+それに `data` を付けてあげることでクリアです。
+
+```kotlin
+data class Person(val name: String, val age: Int)
+```
 
